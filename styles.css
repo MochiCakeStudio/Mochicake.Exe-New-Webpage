@@ -333,15 +333,16 @@ body {
     padding: 5px 0;
 }
 
-.date {
-    font-weight: bold;
-    color: var(--accent-color);
+/* ...existing card styles... */
+.card {
+    /* ...existing card styles... */
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* To-Do List */
-.todo-item {
-    padding: 3px 0;
-    color: var(--text-secondary);
+.card:hover, .card:focus-within {
+    transform: translateY(-16px) scale(1.06);
+    box-shadow: 0 16px 40px var(--shadow-color, rgba(0,0,0,0.18));
+    z-index: 3;
+}
 }
 
 /* Counters */
