@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochicake.Exe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌟</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=VT323&display=swap">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+<!--Audio:Navigation/Splash Screen Sound Effect--> 
+<audio id="enter-sound" src="assets/welcome-chime.mp3" preload="auto"></audio>
+
+<!--: Guestbook Chime For Nav--> 
+<audio id="guestbook-chime" src="assets/Guestbook-chime.mp3" preload="auto"></audio>
+
+<!--Splashscreen (Ascii Art + Loading)-->
+<div class="splash-screen" id="splashScreen">
+    <div class="ascii-art">
+        <span>
+            <!--Mochicake Ascii Art Logo-->         
+                         __                           __                 ____    __                __                
+ /'\_/`\                /\ \      __                 /\ \               /\  _`\ /\ \__            /\ \  __           
+/\      \    ___     ___\ \ \___ /\_\    ___     __  \ \ \/'\      __   \ \,\L\_\ \ ,_\  __  __   \_\ \/\_\    ___   
+\ \ \__\ \  / __`\  /'___\ \  _ `\/\ \  /'___\ /'__`\ \ \ , <    /'__`\  \/_\__ \\ \ \/ /\ \/\ \  /'_` \/\ \  / __`\ 
+ \ \ \_/\ \/\ \L\ \/\ \__/\ \ \ \ \ \ \/\ \__//\ \L\.\_\ \ \\`\ /\  __/  __/\ \L\ \ \ \_\ \ \_\ \/\ \L\ \ \ \/\ \L\ \
+  \ \_\\ \_\ \____/\ \____\\ \_\ \_\ \_\ \____\ \__/.\_\\ \_\ \_\ \____\/\_\ `\____\ \__\\ \____/\ \___,_\ \_\ \____/
+   \/_/ \/_/\/___/  \/____/ \/_/\/_/\/_/\/____/\/__/\/_/ \/_/\/_/\/____/\/_/\/_____/\/__/ \/___/  \/__,_ /\/_/\/___/ 
+        </span>
+    </div>
+    <div class="loading-container">
+        <p class="loading-text">Loading<span class="dots"></span></p>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+</div>
+    <!-- Main content (hidden until splash is dismissed)-->
+    <div id="mainContent" class="main-content hidden"> 
+        <!--marquee: scrolling banner -->
+        <div class="marquee">
+            <span>owo?/ welcome to my site! I am currently: Creating a internet space where I share my work! I might get frustrated but Im going to get this done!</span>
+        </div>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav-menu">
+            <div class="start-button">START</div>
+            <div class="clock" id="clock"></div>
+        </nav>
+
+        <!-- Main Content Grid -->
+        <div class="card-grid" id="cardGrid">
+            
+            <!-- Welcome Card -->
+            <div class="card" data-card="welcome">
+                <div class="card-header">
+                    <h2>Welcome</h2>
+                </div>
+                <div class="card-content">
+                    <div class="pixel-placeholder">
+                        <!-- Placeholder for pixel art/gif -->
+                        <div class="placeholder-box">Your pixel art here</div>
+                    </div>
+                    <p>This is my personal site and a place for me to share my work. It is perpetually in-progress, so please excuse anything unfinished.</p>
+                    <div class="links">
+                        <a href="#" class="rss-link">RSS feed</a>
+                        <span class="responsive-tag">responsive</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Themes Card -->
+            <div class="card" data-card="themes">
+                <div class="card-header">
+                    <h2>Themes</h2>
+                </div>
+                <div class="card-content">
+                    <p>Pick an emoji to change the theme. You may need to tap it twice for the grid to refresh correctly.</p>
+                    <div class="theme-buttons">
+                        <button class="theme-btn" data-theme="mochi">🍡</button>
+                        <button class="theme-btn" data-theme="knife">🗡️</button>
+                        <button class="theme-btn" data-theme="frog">🐸</button>
+                        <button class="theme-btn" data-theme="pink">💗</button>
+                        <button class="theme-btn" data-theme="moon">🌙</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Card -->
+            <div class="card" data-card="info">
+                <div class="card-header">
+                    <h2>About</h2>
+                </div>
+                <div class="card-content">
+                    <h3>What is Mochicake.Studio?</h3>
+                    <p>A creative portfolio and landing page for Mochicake, featuring projects, art, and more!The Studio is pretty much everything I’ve been doing over the years into one. I started off as a simple keyboard enthusiast and then started making artisan keycaps, my own silly keycaps sets, and 3d printing. Started a YouTube channel for planning, studying sessions because I wanted to keep track of what I was doing in a digital form and now my new journey is coding so keeping it all in one seemed like a a good idea. So essentially all of me in one spot!</p>
+                </div>
+            </div>
+
+            <!-- Music Card -->
+            <div class="card" data-card="music">
+                <div class="card-header">
+                    <h2>Music</h2>
+                </div>
+                <div class="card-content">
+                    <!-- Spotify Embed -->
+                    <div class="spotify-embed">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/45BuinEN8KFSIwdpBefjTs?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    
+                    <!-- Alternative: Direct Spotify Link -->
+                    <div class="spotify-link">
+                        <a href="https://open.spotify.com/playlist/45BuinEN8KFSIwdpBefjTs" target="_blank" rel="noopener noreferrer">
+                            🎵 Open in Spotify
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Updates Card -->
+            <div class="card" data-card="updates">
+                <div class="card-header">
+                    <h2>Updates</h2>
+                </div>
+                <div class="card-content">
+                    <div class="update-list">
+                        <div class="update">• Today: Created this awesome template!</div>
+                        <div class="update">• Yesterday: Started planning the website</div>
+                        <div class="update">• Last week: Found inspiration</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Posts Card -->
+            <div class="card" data-card="blog">
+                <div class="card-header">
+                    <h2> Education </h2>
+                </div>
+                <div class="card-content">
+                    <h3>What I've learned!</h3>
+                    <div class="Education">
+                        <div class="education">
+                        <ul> ・ ❏  ꒱ CSS </ul>
+                        <ul> ・ ❏  ꒱ HTML </ul>
+                        <ul> ・ ❏  ꒱ JavaScript </ul>  
+                        <ul> ・ ❏  ꒱ Git/GitHub </ul>
+                        <ul> ・ ❏  ꒱ Basic Python </ul> 
+                        <ul> ・ ❏  ꒱ Blender </ul>
+                        <ul> ・ ❏  ꒱ 3D Printing </ul>
+                        <ul> ・ ❏  ꒱ Keycap Making (resin and some clay) </ul>
+
+                            <p> I'm currently still learning the ins and outs of coding but I think I'm making good progress with it this sites pretty cool dont you think? I'm self teaching myself so a bit slow but with enough charisma you can do anything, right? ( •̯́ ^ •̯̀) </p>
+                    <h3> Other Interests</h3>
+                            <li> App/game Development </li>
+                            <li> Minecraft, APex, Legends, Animal Crossing</li>
+                            <li> Magic the Gathering,  Dungeons and Dragons </li>
+                            <li> Reading, Cooking, Knitting </li>
+                            <li> Frogs!₍𝄐⩌𝄐₎ </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Socials/Contact Card -->
+            <div class="card" data-card="socials-contact">
+                <div class="card-header">
+                    <h2>Socials</h2>
+                </div>
+                <div class="card-content">
+                    <ul class="social-links">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Email</a></li>
+                        <!-- Add your real links above -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Counters/Stats Card -->
+            <div class="card" data-card="stats">
+                <div class="card-header">
+                    <h2>Stats</h2>
+                </div>
+                <div class="card-content">
+                    <div class="counter">
+                        <span class="label">page visits:</span>
+                        <span class="count" id="visitCount">001</span>
+                    </div>
+                    <div class="counter">
+                        <span class="label">current viewers:</span>
+                        <span class="count">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Card Template -->
+            <div class="card" data-card="custom">
+                <div class="card-header">
+                    <h2>Gallery</h2>
+                </div>
+                <div class="card-content">
+                    <p>Replace this with your own content! You can add images, links, widgets, or anything else you want.</p>
+                    <div class="placeholder-box">Your content here</div>
+                </div>
+            </div>
+<!-- FAQ -->
+            <div class="card" data-card="faq">
+                <div class="card-header">
+                    <h2>FAQ</h2>
+                </div>
+                <div class="card-content">
+                    <details>
+                        <summary>What is Mochicake.Studio?</summary>
+                        <div class="faq-answer">
+                            A creative portfolio and landing page for Mochicake, featuring projects, art, and more! The Studio is pretty much everything I’ve been doing over the years into one. I started off as a simple keyboard enthusiast and then started making artisan keycaps, my own silly keycaps sets, and 3d printing. Started a YouTube channel for planning, studying sessions because I wanted to keep track of what I was doing in a digital form and now my new journey is coding so keeping it all in one seemed like a a good idea. So essentially all of me in one spot!
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How can I contact you?</summary>
+                        <div class="faq-answer">
+                            <a href="mailto:mochicakes.studio@gmail.com" class="link">mochicakes.studio@gmail.com</a>
+                        </div>
+                    </details>
+                    <!-- Add more FAQ items as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
