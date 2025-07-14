@@ -1,14 +1,14 @@
 /* CSS Variables for Themes */
 :root {
     --header1-color: #ff698a;
-    --header2-color: #f18fa0;
+    --header2-color: #EDB9C6;
     --header3-color: #ac8ff1;
     --bg-primary: #ffebef;
     --bg-secondary: #ffffff;
     --text-primary: #000000;
     --text-secondary: #333333;
     --accent-color: hsl(350, 78%, 75%);
-    --link-color: #f18fa0;
+    --link-color: #EDB9C6;
     --border-color:#000000;
     --shadow-color: #000;
     --card-bg: #ffffff;
@@ -20,14 +20,14 @@
 /* Theme Variations */
 [data-theme="pink"] {
     --header1-color: #ff698a;
-    --header2-color: #f18fa0;
+    --header2-color: #EDB9C6;
     --header3-color: #ff698a;
     --bg-primary: #ffebef;
     --bg-secondary: #ffffff;
     --text-primary: #000000;
     --text-secondary: #333333;
-    --accent-color: #f18fa0;
-    --link-color: #f18fa0;
+    --accent-color: #EDB9C6;
+    --link-color: #EDB9C6;
     --border-color:#000000;
     --shadow-color: #000;
     --card-bg: #ffffff;
@@ -39,7 +39,7 @@
 [data-theme="knife"] {
     --header1-color: #8fb9f1;
     --header2-color: #4a90e2;
-    --header3-color: #f18fa0;
+    --header3-color: #EDB9C6;
     --bg-primary: #ffebef;
     --bg-secondary: #ffffff;
     --text-primary: #000000;
@@ -55,56 +55,56 @@
 }
 
 [data-theme="moon"] {
-    --header1-color: #ac8ff1;
-    --header2-color: #f18fa0;
-    --header3-color: #ff698a;
-    --bg-primary: #ffebef;
+    --header1-color: #3a3a3a;
+    --header2-color: #a7a7a7;
+    --header3-color: #000;
+    --bg-primary: #000000;
     --bg-secondary: #ffffff;
     --text-primary: #000000;
-    --text-secondary: #333333;
-    --accent-color: #ac8ff1;
-    --link-color: #ac8ff1;
+    --text-secondary: #000000;
+    --accent-color: #505050;
+    --link-color: #464646;
     --border-color:#000000;
-    --shadow-color: #000;
+    --shadow-color: #a7a7a7;
     --card-bg: #ffffff;
     --header-text: #000000;
-    --header-bg: #FAC9D1;
+    --header-bg: #272727;
     --border-color: #000000;
 }
 
 [data-theme="mochi"] {
     --header1-color: #b6a16b;
     --header2-color: #000000;
-    --header3-color: #FAC9D1;
+    --header3-color: #D0DCBA;
     --bg-primary: #F4E5C0;
     --bg-secondary: #ffffff;
     --text-primary: #000000;
     --text-secondary: #333333;
-    --accent-color: #E1EFCE;
+    --accent-color: #D0DCBA;
     --link-color: #FAC9D1;
     --border-color:#000000;
     --shadow-color: #8f8f8f;
     --card-bg: #ffffff;
     --header-text: #000000;
-    --header-bg: #E1EFCE;
+    --header-bg: #FAC9D1;
     --border-color: #000000;
 }
 
 [data-theme="frog"] {
-    --header1-color: #bdd49b;
+    --header1-color: #D0DCBA;
     --header2-color: #000000;
-    --header3-color: #bdd49b;
+    --header3-color: #D0DCBA;
     --bg-primary: #E1EFCE;
     --bg-secondary: #ffffff;
     --text-primary: #000000;
     --text-secondary: #333333;
     --accent-color: #E1EFCE;
-    --link-color: #97a87d;
+    --link-color: #BEC9A5;
     --border-color:#000000;
     --shadow-color: #000;
     --card-bg: #ffffff;
     --header-text: #000000;
-    --header-bg: #97a87d;
+    --header-bg: #BEC9A5;
     --border-color: #000000;
 }
 
