@@ -343,7 +343,6 @@ body {
     box-shadow: 0 16px 40px var(--shadow-color, rgba(0,0,0,0.18));
     z-index: 3;
 }
-}
 
 /* Counters */
 .counter {

@@ -333,4 +333,3 @@ class SplashScreenManager {
         document.addEventListener('keydown', playOnInteraction, { once: true });
     }
 }
-
